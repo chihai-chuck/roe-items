@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <script src="../controllers/lib/vue.min.js"></script>
+    <link rel="stylesheet" href="../styles/index.less">
+    <!-- inject:css -->
+    <!-- endinject -->
+</head>
+
+<body>
+    <ul class="roe-items">
+        <li v-for="item in data" :class="{invalid:item.invalid}">
+            <i class="icon-info" v-if="item.invalid">已从游戏中移除</i>
+            <div class="content">
+                <img :src="item.image" :alt="item.name">
+                <div class="info">
+                    <h3>
+                        <span v-text="item.name"></span>
+                        <em v-text="item.subName" v-if="item.subName"></em>
+                    </h3>
+                    <p v-text="item.desc"></p>
+                </div>
+                <i v-text="`重量: ${item.width}`"></i>
+            </div>
+        </li>
+    </ul>
+
+    <script src="../controllers/index.js"></script>
+    <!-- inject:js -->
+    <!-- endinject -->
+</body>
+</html>
