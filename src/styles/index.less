@@ -5,8 +5,13 @@
     src: url("../assets/fonts/iconfont.woff") format("woff");
 }
 
-.icon-info:before { content: "\e7dd"; }
-.icon-clock:before { content: "\e7db"; }
+.icon-info:before {
+    content: "\e7dd";
+}
+
+.icon-clock:before {
+    content: "\e7db";
+}
 
 * {
     margin: 0;
@@ -26,9 +31,15 @@
     -webkit-touch-callout: none;
     user-select: none;
 }
+
 em, i {
     font-weight: normal;
     font-style: normal;
+}
+
+body {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
 }
 
 .article-content {
@@ -41,6 +52,7 @@ em, i {
     ul {
         padding-left: 10px;
         list-style: none;
+        margin-top: 0;
 
         li {
             line-height: normal;
@@ -75,7 +87,6 @@ em, i {
     padding: 10px;
     background-color: #fff;
     overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
 
     &::-webkit-scrollbar {
         width: 0;
@@ -99,6 +110,7 @@ em, i {
                 border-bottom: 1px dashed #e88888;
                 color: #e88888;
             }
+
             .content {
                 > i {
                     border-left: 1px dashed #e88888;
@@ -126,7 +138,6 @@ em, i {
             position: relative;
             display: flex;
             width: 100%;
-            height: 90px;
             padding: 10px;
 
             > img {
@@ -136,13 +147,13 @@ em, i {
             }
 
             .info {
-                .align(h-space-between, column);
                 flex: 1;
-                height: 100%;
+                min-height: 70px;
                 padding: 10px;
 
                 > h3 {
                     width: 100%;
+                    margin-bottom: 15px;
                     font-size: 14px;
 
                     > em {

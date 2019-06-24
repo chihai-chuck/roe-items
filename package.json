@@ -4,8 +4,14 @@
     "description": "小黑盒无限法则百科物品道具列表",
     "main": "gulpfile.js",
     "scripts": {
-        "dev": "gulp dev --gulpfile gulpfile-dev.js",
-        "build": "gulp build"
+        "dev-supplies": "gulp dev --gulpfile gulpfile-dev.js --type supplies",
+        "dev-equipment": "gulp dev --gulpfile gulpfile-dev.js --type equipment",
+        "dev-missile": "gulp dev --gulpfile gulpfile-dev.js --type missile",
+        "dev-others": "gulp dev --gulpfile gulpfile-dev.js --type others",
+        "build-supplies": "gulp build --type supplies",
+        "build-equipment": "gulp build --type equipment",
+        "build-missile": "gulp build --type missile",
+        "build-others": "gulp build --type others"
     },
     "author": "chuck@chihai.me",
     "devDependencies": {

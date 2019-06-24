@@ -12,7 +12,7 @@
 <body>
     <ul class="roe-items">
         <li v-for="item in data" :class="{invalid:item.invalid}">
-            <i class="icon-info" v-if="item.invalid">已从游戏中移除</i>
+            <i class="icon-info" v-if="item.invalid" v-text="item.invalidReason||'已从游戏中移除'"></i>
             <div class="content">
                 <img :src="item.image" :alt="item.name">
                 <div class="info">
@@ -20,9 +20,9 @@
                         <span v-text="item.name"></span>
                         <em v-text="item.subName" v-if="item.subName"></em>
                     </h3>
-                    <p v-text="item.desc"></p>
+                    <p v-html="item.desc"></p>
                 </div>
-                <i v-text="`重量: ${item.width}`"></i>
+                <i v-if="item.weight" v-text="`容量: ${item.weight}`"></i>
             </div>
         </li>
     </ul>
